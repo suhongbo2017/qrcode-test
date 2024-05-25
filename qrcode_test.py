@@ -10,6 +10,6 @@ while run:
     img = qrcode.make(data) #生成二维码数据
     img.save(f'./{data}.png') #保存为png图像。
     with open('./log.txt','+a',encoding='utf-8')as qrc: # 生成内容日志。
-        qrc.write(datetime.now(),data)
+        qrc.write(f'{datetime.now()} :{data}')
     
 
